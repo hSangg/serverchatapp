@@ -1,0 +1,118 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "nhung",
+    "email": "n@gmail.com",
+    "password": "n"
+}
+
+###
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "s@gmail.com",
+    "password": "s"
+}
+
+###
+GET http://localhost:5000/api/user?userId=621ab59260b8e190f586b448
+
+###
+POST  http://localhost:5000/api/post
+Content-Type: application/json
+
+{
+    "userId": "621ab59260b8e190f586b448",
+    "desc": "Day la bai phost tu sang"
+}
+
+###
+PUT http://localhost:5000/api/post/6219583a720ea7bf919a2963
+Content-Type: application/json
+
+{
+    "userId": "62194b2073827287cf18b85c",
+    "desc": "this is some now"
+}
+
+###
+DELETE http://localhost:5000/api/post/62195ada720ea7bf919a297d
+Content-Type: application/json
+
+{
+    "userId": "62194b2073827287cf18b85c"
+}
+
+###
+PUT http://localhost:5000/api/post/62195ade720ea7bf919a297f/like
+Content-Type: application/json
+
+{
+    "userId": "62194b2073827287cf18b85c"
+}
+ 
+###
+GET http://localhost:5000/api/post/profile/sangg
+Content-Type: application/json
+
+
+###
+PUT http://localhost:5000/api/user/62194b2073827287cf18b85c
+Content-Type: application/json
+
+{
+    "userId": "62194b2073827287cf18b85c",
+    "username": "sang",
+    "email": "hoai.sang050@gmail.com"
+}
+
+###
+DELETE  http://localhost:5000/api/user/62194b2073827287cf18b85c
+Content-Type: application/json
+
+{
+    "isAdmin": "true"
+}
+
+###
+PUT http://localhost:5000/api/user/6218fc4cf45158187adfc94a/follow
+Content-Type: application/json
+
+{
+    "userId": "6218f963efab8c0b296a4d31"
+}
+###
+PUT http://localhost:5000/api/user/6218fc4cf45158187adfc94a/unfollow
+Content-Type: application/json
+
+{
+    "userId": "6218f963efab8c0b296a4d31"
+}
+
+###
+POST http://localhost:5000/api/conversation
+Content-Type: application/json
+
+{
+    "senderId": "621eff211ae0ba60d4154050",
+    "receiverId": "621f2778fca37ca21b47959f"
+
+}
+
+###
+GET http://localhost:5000/api/conversation/6218fc4cf45158187adfc94a
+
+###
+POST http://localhost:5000/api/message
+Content-Type: application/json
+
+{
+    "conversationId": "621f27c1fca37ca21b4795a3",
+    "sender": "621f2778fca37ca21b47959f",
+    "text": "Hy! I'm toooo"
+}
+
+###
+GET  http://localhost:5000/api/message/621c5546ac9d0f69e54e5270
