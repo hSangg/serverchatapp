@@ -1,8 +1,6 @@
 const express = require("express")
 const User = require("../models/User")
 const router = express.Router()
-const bcrypt = require("bcrypt")
-
 router.post("/register", async (req, res) => {
   const { username, email, password } = req.body
 
