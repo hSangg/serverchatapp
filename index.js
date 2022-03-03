@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 
 //@port
-const port = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000
 
 const authRoute = require("./routes/auth")
 const userRoute = require("./routes/user")
@@ -45,6 +45,6 @@ app.use("/api/user", userRoute)
 app.use("/api/conversation", conversationRoute)
 app.use("/api/message", messageRoute)
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log("SERVER START ON 8000")
 })
